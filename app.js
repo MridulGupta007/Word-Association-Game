@@ -83,9 +83,8 @@ function checkAnswer(questionBox, questionButton, option, optionIndex, correctAn
         addResult( questionBox, "Correct", 'correct')
     } else{
         if(score === 0){
-            continue
-        }
-        score--
+            score = 0
+        } else { score-- }
         scoreDisplay.textContent = score
         addResult( questionBox, "Wrong", 'wrong')
     }
